@@ -1,5 +1,7 @@
 # Auth0 BFF security architecture using ASP.NET Core and nx Angular standalone
 
+[![.NET and npm build](https://github.com/damienbod/bff-auth0-aspnetcore-angular/actions/workflows/dotnet.yml/badge.svg)](https://github.com/damienbod/bff-auth0-aspnetcore-angular/actions/workflows/dotnet.yml) [![License](https://img.shields.io/badge/license-Apache%20License%202.0-blue.svg)](https://github.com/damienbod/bff-auth0-aspnetcore-angular/blob/main/LICENSE)
+
 ## Debugging
 
 Start the Angular project from the **ui** folder
