@@ -6,15 +6,12 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace BffAuth0.Server.Controllers;
 
-// orig src https://github.com/berhir/BlazorWebAssemblyCookieAuth
 [Route("api/[controller]")]
 public class AccountController : ControllerBase
 {
     [HttpGet("Login")]
     public ActionResult Login(string? returnUrl, string? claimsChallenge)
     {
-        // var claims = "{\"access_token\":{\"acrs\":{\"essential\":true,\"value\":\"c1\"}}}";
-        // var claims = "{\"id_token\":{\"acrs\":{\"essential\":true,\"value\":\"c1\"}}}";
         var redirectUri = !string.IsNullOrEmpty(returnUrl) ? returnUrl : "/";
 
         var properties = new AuthenticationProperties { RedirectUri = redirectUri };
