@@ -35,6 +35,6 @@ https://learn.microsoft.com/en-us/aspnet/core/introduction-to-aspnet-core
 
 https://nx.dev/getting-started/intro
 
-https://github.com/AzureAD/microsoft-identity-web
+https://auth0.com/docs
 
 https://github.com/isolutionsag/aspnet-react-bff-proxy-example
