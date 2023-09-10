@@ -22,7 +22,6 @@ Or just open Visual Studio and run the solution.
 
 - NetEscapades.AspNetCore.SecurityHeaders
 - Yarp.ReverseProxy
-- Microsoft.Identity.Web
 - ASP.NET Core
 - Angular 
 - Nx
