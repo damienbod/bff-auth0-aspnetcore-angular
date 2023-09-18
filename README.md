@@ -2,6 +2,8 @@
 
 [![.NET and npm build](https://github.com/damienbod/bff-auth0-aspnetcore-angular/actions/workflows/dotnet.yml/badge.svg)](https://github.com/damienbod/bff-auth0-aspnetcore-angular/actions/workflows/dotnet.yml) [![License](https://img.shields.io/badge/license-Apache%20License%202.0-blue.svg)](https://github.com/damienbod/bff-auth0-aspnetcore-angular/blob/main/LICENSE)
 
+[Secure Angular application using Auth0 and ASP.NET Core with BFF](https://damienbod.com/2023/09/18/secure-angular-application-using-auth0-and-asp-net-core-with-bff/)
+
 ## Debugging
 
 Start the Angular project from the **ui** folder
