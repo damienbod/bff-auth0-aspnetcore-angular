@@ -41,3 +41,5 @@ https://auth0.com/docs
 https://github.com/isolutionsag/aspnet-react-bff-proxy-example
 
 https://damienbod.com/2021/04/12/securing-blazor-web-assembly-using-cookies-and-auth0/
+
+https://github.com/damienbod/bff-openiddict-aspnetcore-angular
