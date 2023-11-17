@@ -28,6 +28,10 @@ Or just open Visual Studio and run the solution.
 - Angular 
 - Nx
 
+## History
+
+2024-11-17 Updated .NET 8
+
 ## Links
 
 https://github.com/damienbod/bff-aspnetcore-angular
