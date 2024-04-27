@@ -30,6 +30,7 @@ Or just open Visual Studio and run the solution.
 
 ## History
 
+- 2024-04-27 Updated build
 - 2024-04-14 Updated packages
 - 2024-01-14 Updated packages
 - 2023-12-31 Open redirect protection added to login
