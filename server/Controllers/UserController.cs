@@ -16,7 +16,8 @@ public class UserController : ControllerBase
 
     private static UserInfo CreateUserInfo(ClaimsPrincipal claimsPrincipal)
     {
-        if (!claimsPrincipal?.Identity?.IsAuthenticated ?? true)
+        if (claimsPrincipal == null || claimsPrincipal.Identity == null 
+            || !claimsPrincipal.Identity.IsAuthenticated)
         {
             return UserInfo.Anonymous;
         }
@@ -26,7 +27,7 @@ public class UserController : ControllerBase
             IsAuthenticated = true
         };
 
-        if (claimsPrincipal?.Identity is ClaimsIdentity claimsIdentity)
+        if (claimsPrincipal.Identity is ClaimsIdentity claimsIdentity)
         {
             userInfo.NameClaimType = claimsIdentity.NameClaimType;
             userInfo.RoleClaimType = claimsIdentity.RoleClaimType;
@@ -37,7 +38,7 @@ public class UserController : ControllerBase
             userInfo.RoleClaimType = ClaimTypes.Role;
         }
 
-        if (claimsPrincipal?.Claims?.Any() ?? false)
+        if (claimsPrincipal.Claims?.Any() ?? false)
         {
             // Add just the name claim
             var claims = claimsPrincipal.FindAll(userInfo.NameClaimType)
