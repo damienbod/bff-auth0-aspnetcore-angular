@@ -30,6 +30,7 @@ Or just open Visual Studio and run the solution.
 
 ## History
 
+- 2024-10-03 Updated packages
 - 2024-06-06 Updated packages
 - 2024-04-27 Updated build
 - 2024-04-14 Updated packages
