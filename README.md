@@ -38,6 +38,7 @@ nx migrate --run-migrations=migrations.json
 
 ## History
 
+- 2024-10-06 Updated Angular 18.2.7
 - 2024-10-03 Updated packages
 - 2024-06-06 Updated packages
 - 2024-04-27 Updated build
