@@ -28,6 +28,14 @@ Or just open Visual Studio and run the solution.
 - Angular 
 - Nx
 
+## Angular nx Updates
+
+```
+nx migrate latest
+
+nx migrate --run-migrations=migrations.json
+```
+
 ## History
 
 - 2024-10-03 Updated packages
