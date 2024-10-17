@@ -17,13 +17,12 @@ builder.WebHost.ConfigureKestrel(serverOptions =>
 
 var services = builder.Services;
 var configuration = builder.Configuration;
-var env = builder.Environment;
 
 services.AddSecurityHeaderPolicies()
   .SetPolicySelector((PolicySelectorContext ctx) =>
   {
       return SecurityHeadersDefinitions.GetHeaderPolicyCollection(
-          env.IsDevelopment(), configuration["Auth0:Domain"]);
+          builder.Environment.IsDevelopment(), configuration["Auth0:Domain"]);
   });
 
 services.AddAntiforgery(options =>
@@ -123,7 +122,7 @@ JsonWebTokenHandler.DefaultInboundClaimTypeMap.Clear();
 // Remove this in deployments, only for debugging
 IdentityModelEventSource.ShowPII = true;
 
-if (env.IsDevelopment())
+if (app.Environment.IsDevelopment())
 {
     app.UseDeveloperExceptionPage();
     app.UseWebAssemblyDebugging();
