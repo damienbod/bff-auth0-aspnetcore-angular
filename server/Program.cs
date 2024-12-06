@@ -63,6 +63,14 @@ services.AddAuthentication(options =>
     options.UsePkce = true;
     options.GetClaimsFromUserInfoEndpoint = true;
     options.TokenValidationParameters.NameClaimType = "name";
+    options.Events = new OpenIdConnectEvents
+    {
+        OnTokenResponseReceived = context =>
+        {
+            var idToken = context.TokenEndpointResponse.IdToken;
+            return Task.CompletedTask;
+        }
+    };
 
     options.Events = new OpenIdConnectEvents
     {
