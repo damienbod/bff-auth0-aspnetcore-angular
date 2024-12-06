@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace BffAuth0.Server.Models;
+﻿namespace BffAuth0.Server.Models;
 
 public class UserInfo
 {
