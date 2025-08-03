@@ -1,28 +1,28 @@
 <h2>BFF Auth0 Security architecture with Angular nx</h2>
 
-<ng-container
-  *ngIf="userProfileClaims$ | async as userProfileClaims; else noAuth"
->
-  <div *ngIf="userProfileClaims?.isAuthenticated; else noAuth">
+@if (userProfileClaims$ | async; as userProfileClaims) {
+  @if (userProfileClaims?.isAuthenticated) {
+    <div>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="btn btn-link" href="./call-api">Call API</a>
+        <form method="post" action="api/Account/Logout">
+          <button class="btn btn-link" type="submit">Sign out</button>
+        </form>
+      </nav>
+    </div>
+  } @else {
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="btn btn-link" href="./call-api">Call API</a>
-
-      <form method="post" action="api/Account/Logout">
-        <button class="btn btn-link" type="submit">Sign out</button>
-      </form>
+      <a class="btn btn-link" href="api/Account/Login">Log in</a>
     </nav>
-  </div>
-
+  }
   <hr />
-
   <h2>User profile:</h2>
   <pre>{{ userProfileClaims | json }}</pre>
-</ng-container>
-
-<ng-template #noAuth>
+} @else {
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="btn btn-link" href="api/Account/Login">Log in</a>
   </nav>
-</ng-template>
+}
+
 
 <hr />

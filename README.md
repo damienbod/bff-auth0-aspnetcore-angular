@@ -38,6 +38,7 @@ nx migrate --run-migrations=migrations.json
 
 ## History
 
+- 2025-08-03 Update packages, Angular 20.1.4
 - 2025-05-02 Update packages
 - 2025-02-08 Update packages
 - 2024-12-18 Angular 19
