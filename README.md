@@ -1,4 +1,4 @@
-# Auth0 BFF security architecture using ASP.NET Core and nx Angular standalone
+# Auth0 BFF security architecture using ASP.NET Core and Angular CLI
  
 [![.NET and npm build](https://github.com/damienbod/bff-auth0-aspnetcore-angular/actions/workflows/dotnet.yml/badge.svg)](https://github.com/damienbod/bff-auth0-aspnetcore-angular/actions/workflows/dotnet.yml) [![License](https://img.shields.io/badge/license-Apache%20License%202.0-blue.svg)](https://github.com/damienbod/bff-auth0-aspnetcore-angular/blob/main/LICENSE)
 
@@ -26,9 +26,8 @@ Or just open Visual Studio and run the solution.
 - Yarp.ReverseProxy
 - ASP.NET Core
 - Angular 
-- Nx
 
-## Angular nx Updates
+## Angular CLI Updates
 
 ```
 nx migrate latest
