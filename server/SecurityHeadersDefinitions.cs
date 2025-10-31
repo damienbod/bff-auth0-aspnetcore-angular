@@ -1,4 +1,4 @@
-﻿namespace BffMicrosoftEntraID.Server;
+﻿namespace BffAuth0.Server;
 
 public static class SecurityHeadersDefinitions
 {
