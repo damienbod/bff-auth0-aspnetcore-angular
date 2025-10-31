@@ -23,7 +23,6 @@ interface UserProfile {
 export class HomeComponent implements OnInit {
   private readonly httpClient = inject(HttpClient);
   dataFromAzureProtectedApi$?: Observable<string[]>;
-  dataGraphApiCalls$?: Observable<string[]>;
   userProfileClaims$?: Observable<UserProfile>;
 
   ngOnInit() {
@@ -40,12 +39,6 @@ export class HomeComponent implements OnInit {
   getDirectApiData() {
     this.dataFromAzureProtectedApi$ = this.httpClient.get<string[]>(
       `${this.getCurrentHost()}/api/DirectApi`
-    );
-  }
-
-  getGraphApiDataUsingApi() {
-    this.dataGraphApiCalls$ = this.httpClient.get<string[]>(
-      `${this.getCurrentHost()}/api/GraphApiData`
     );
   }
 

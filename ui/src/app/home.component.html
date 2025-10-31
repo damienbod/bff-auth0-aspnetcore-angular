@@ -4,9 +4,7 @@
   @if (userProfileClaims?.isAuthenticated) {
     <div>
       <button (click)="getDirectApiData()">get data from API direct</button>
-      <button (click)="getGraphApiDataUsingApi()">
-        get Graph data using API
-      </button>
+
       <form method="post" action="api/Account/Logout">
         <button class="btn btn-link" type="submit">Sign out</button>
       </form>
@@ -20,9 +18,6 @@
   <hr />
   <h2>get direct data using API:</h2>
   <pre>{{ dataFromAzureProtectedApi$ | async | json }}</pre>
-  <hr />
-  <h2>get Microsoft Graph data using API:</h2>
-  <pre>{{ dataGraphApiCalls$ | async | json }}</pre>
 } @else {
   <a class="btn btn-link" href="api/Account/Login">Log in</a>
 }
