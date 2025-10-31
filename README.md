@@ -9,7 +9,7 @@
 Start the Angular project from the **ui** folder
 
 ```
-nx serve --ssl
+ng serve --ssl
 ```
 
 Start the ASP.NET Core project from the **server** folder
@@ -30,9 +30,11 @@ Or just open Visual Studio and run the solution.
 ## Angular CLI Updates
 
 ```
-nx migrate latest
+npm install -g @angular/cli latest
 
-nx migrate --run-migrations=migrations.json
+ng update
+
+ng update @angular/cli @angular/core
 ```
 
 ## History
