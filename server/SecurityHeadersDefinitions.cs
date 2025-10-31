@@ -1,4 +1,4 @@
-﻿namespace BffAuth0.Server;
+﻿namespace BffMicrosoftEntraID.Server;
 
 public static class SecurityHeadersDefinitions
 {
@@ -38,6 +38,7 @@ public static class SecurityHeadersDefinitions
                     builder.AddStyleSrc().WithNonce().UnsafeInline();
                 }
 
+                builder.AddScriptSrcElem().WithNonce().UnsafeInline();
                 builder.AddScriptSrc().WithNonce().UnsafeInline();
             })
             .RemoveServerHeader()
