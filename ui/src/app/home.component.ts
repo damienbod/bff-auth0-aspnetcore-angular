@@ -1,7 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, OnInit, inject, ChangeDetectionStrategy } from '@angular/core';
 import { Observable } from 'rxjs';
+import { getCookie } from './getCookie';
 
 interface Claim {
   type: string;
@@ -18,16 +19,22 @@ interface UserProfile {
 @Component({
     selector: 'app-home',
     templateUrl: 'home.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: [CommonModule]
 })
 export class HomeComponent implements OnInit {
   private readonly httpClient = inject(HttpClient);
   dataFromAzureProtectedApi$?: Observable<string[]>;
+  dataGraphApiCalls$?: Observable<string[]>;
   userProfileClaims$?: Observable<UserProfile>;
 
   ngOnInit() {
     console.info('home component');
     this.getUserProfile();
+  }
+
+  getXsrfToken(): string {
+    return getCookie('XSRF-RequestToken');
   }
 
   getUserProfile() {
@@ -42,9 +49,15 @@ export class HomeComponent implements OnInit {
     );
   }
 
+  getGraphApiDataUsingApi() {
+    this.dataGraphApiCalls$ = this.httpClient.get<string[]>(
+      `${this.getCurrentHost()}/api/GraphApiData`
+    );
+  }
+
   private getCurrentHost() {
-    const host = window.location.host;
-    const url = `${window.location.protocol}//${host}`;
+    const host = globalThis.location.host;
+    const url = `${globalThis.location.protocol}//${host}`;
 
     return url;
   }
