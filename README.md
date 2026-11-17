@@ -41,6 +41,7 @@ ng update @angular/cli @angular/core
 
 ## History
 
+- 2026-11-17 Updated .NET 11, Angular 22
 - 2026-05-16 Updated NuGet, Update Angular
 - 2025-12-07 Updated .NET 10, Angular 21
 - 2025-10-31 Update packages, Angular 20.3.0
